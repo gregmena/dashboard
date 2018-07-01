@@ -35,8 +35,9 @@ $("#totalHours").append(data[data.length-1].totalHours);
 var totalHoursForMath = parseInt(data[data.length-1].totalHours);
 var totalStudentsForMath = parseInt(data[data.length-1].students);
 var averageComputed = (totalHoursForMath/totalStudentsForMath); 
+var roundedQuotient = averageComputed.toFixed(2);
 
-$("#average").append(averageComputed);
+$("#average").append(roundedQuotient);
 
 // var myJsonString = parseInt(data);
 // console.log(myJsonString);
@@ -89,50 +90,44 @@ $("#average").append(averageComputed);
             </div>
         </section>
 
-        <section class="container">
+<section class="container">
         
 
-            <div class="intro column is-10 is-offset-1">
+<div class="intro column is-10 is-offset-1">
+<h2 class="title is-2">Non-Credit ESL Courses</h2>
+<p><span id="entries" style="color:red"></span> form entries as of <span id="date" style="color: red"></span></p>
+<br />
 
-        	<h2 class="title is-2">Non-Credit ESL Courses</h2>
+<!--  -->
+<div class="box">
+<span id="students" style="color:red; font-size: 60px;"></span> <p>students <i class="fas fa-user-graduate"></i></p>
+</div>
+
+	
+<!--  -->
+
+<div class="box"><span id="totalHours" style="color:red; font-size: 60px;"></span><p>total hours attended				<i class="far fa-clock"></i></p>
+  </div>
 
 
-            <p>
-	            <span id="entries" style="color:red"></span> form entries as of <span id="date" style="color: red"></span>
-            </p>
+<!--  -->
 
-            <br />
+<div class="box">
+	<span id="average" style="color:red; font-size: 60px;">
+	</span> 
+	<p>average hours attended<i class="fas fa-caret-down"></i></p>
+</div>
 
-				
-            <div class="box">
+<!--  -->
 
-	         <span id="students" style="color:red; font-size: 60px;"></span> 
-	            	<p>students
-	            		<i class="fas fa-user-graduate"></i>
-	            	</p>
-            </div>
-				
+<div class="box">
+ <span id="ftes" style="color:blue; font-size: 20px;">need formula</span> <p>FTES <i class="fas fa-school"></i></p>
+</div>
 
-            <div class="box"><span id="totalHours" style="color:red; font-size: 60px;"></span><p>total hours attended				<i class="far fa-clock"></i></p>
-            </div>
+</section>
 
-            <div class="box">
 
-	         <span id="average" style="color:red; font-size: 60px;"></span> 
-	            	<p>average hours attended
-	            		<i class="fas fa-caret-down"></i>
-	            	</p>
-            </div>
 
-            <div class="box">
-
-	         <span id="ftes" style="color:red; font-size: 60px;">need formula</span> 
-	            	<p>FTES
-	            		<i class="fas fa-school"></i>
-	            	</p>
-            </div>
-
-        </section>
         <footer class="footer">
             <div class="container">
                     
