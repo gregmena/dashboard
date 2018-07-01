@@ -12,7 +12,36 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/hero.css">
         <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$.getJSON("https://sheetsu.com/apis/v1.0su/3eb2416f0252", function(data) {
+  console.log(data);
+  debugger;
+
+// ajax for first row of data, hardcoded
+  	$("#date").html(data[0].date);
+  	$("#entries").html(data[0].entries);
+  	$("#students").html(data[0].students);
+  	$("#totalHours").html(data[0].totalHours);
+
+// last row  once data is good
+// $("#date").html(data[data.length-1].date);
+
+});
+
+// chr.parker123@gmail.com
+
+		</script>
     </head>
+
+
+
+
+
+
+
+
+
     <body>
         <section class="hero is-info is-medium is-bold">
             <div class="hero-head">
@@ -51,6 +80,17 @@
                 <h2 class="title">Perfect for developers or designers!</h2><br>
                 <p class="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a. Neque egestas congue quisque egestas diam in arcu cursus.</p>
             </div>
+
+			<div id="date"></div>
+
+			<div id="entries"></div>
+
+			<div id="students"></div>
+
+			<div id="totalHours"></div>
+
+
+
 
         </section>
         <footer class="footer">
