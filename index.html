@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 		<script>
 			$.getJSON("https://sheetsu.com/apis/v1.0su/3eb2416f0252", function(data) {
-  console.log(data);
+
   debugger;
 
 // ajax for first row of data, hardcoded
@@ -25,11 +25,24 @@
   	// $("#students").html(data[0].students);
   	// $("#totalHours").html(data[0].totalHours);
 
-// ajax for last row of data entered
+// append last google sheet data to span with id 
 $("#date").append(data[data.length-1].date);
 $("#entries").append(data[data.length-1].entries);
 $("#students").append(data[data.length-1].students);
 $("#totalHours").append(data[data.length-1].totalHours);
+
+//dividing total hours by number of student entries append to span
+var totalHoursForMath = parseInt(data[data.length-1].totalHours);
+var totalStudentsForMath = parseInt(data[data.length-1].students);
+var averageComputed = (totalHoursForMath/totalStudentsForMath); 
+
+$("#average").append(averageComputed);
+
+// var myJsonString = parseInt(data);
+// console.log(myJsonString);
+
+// var crazyNumber = myJsonString[0].students*4567898765;
+// console.log(crazyNumber);
 });
 
 
@@ -105,7 +118,7 @@ $("#totalHours").append(data[data.length-1].totalHours);
 
             <div class="box">
 
-	         <span id="average" style="color:red; font-size: 60px;">to be computed</span> 
+	         <span id="average" style="color:red; font-size: 60px;"></span> 
 	            	<p>average hours attended
 	            		<i class="fas fa-caret-down"></i>
 	            	</p>
@@ -113,7 +126,7 @@ $("#totalHours").append(data[data.length-1].totalHours);
 
             <div class="box">
 
-	         <span id="ftes" style="color:red; font-size: 60px;">to be computed as well</span> 
+	         <span id="ftes" style="color:red; font-size: 60px;">need formula</span> 
 	            	<p>FTES
 	            		<i class="fas fa-school"></i>
 	            	</p>
