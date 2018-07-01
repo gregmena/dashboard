@@ -13,6 +13,7 @@
         <link rel="stylesheet" type="text/css" href="../css/hero.css">
         <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 		<script>
 			$.getJSON("https://sheetsu.com/apis/v1.0su/3eb2416f0252", function(data) {
   console.log(data);
@@ -25,10 +26,10 @@
   	// $("#totalHours").html(data[0].totalHours);
 
 // ajax for last row of data entered
-$("#date").html(data[data.length-1].date);
-$("#entries").html(data[data.length-1].entries);
-$("#students").html(data[data.length-1].students);
-$("#totalHours").html(data[data.length-1].totalHours);
+$("#date").append(data[data.length-1].date);
+$("#entries").append(data[data.length-1].entries);
+$("#students").append(data[data.length-1].students);
+$("#totalHours").append(data[data.length-1].totalHours);
 });
 
 
@@ -37,9 +38,6 @@ $("#totalHours").html(data[data.length-1].totalHours);
 
 		</script>
     </head>
-
-
-
 
 
 
@@ -68,30 +66,43 @@ $("#totalHours").html(data[data.length-1].totalHours);
             </div>
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h1 class="title">
-                    Noncredit Programs Enrollment Dashboard
+                    <h1 class="title is-1">
+                    Noncredit Data Dashboard
                     </h1>
                     <h2 class="subtitle">
-                    This web application displays weekly
-                    attendance updates for ESL, Basic Skills and CTE programs.
+                    Weekly attendance data for ESL, Basic Skills and CTE programs.
                     </h2>
                 </div>
             </div>
         </section>
 
         <section class="container">
+        
+
             <div class="intro column is-10 is-offset-1">
-                <h2 class="title">Perfect for developers or designers!</h2><br>
-                <p class="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a. Neque egestas congue quisque egestas diam in arcu cursus.</p>
+
+        	<h2 class="title is-2">Non-Credit ESL Courses</h2>
+
+
+            <p>
+	            <span id="entries" style="color:red"></span> form entries as of <span id="date" style="color: red"></span>
+            </p>
+
+            <br />
+
+				
+            <div class="box">
+
+            <span id="students" style="color:red; font-size: 60px;"></span> <p>students
+
+            <i class="fas fa-user-graduate"></i></p>
+
+            </div>
+				
+
+            <div class="box"><span id="totalHours" style="color:red; font-size: 60px;"></span><p>total hours attended				<i class="far fa-clock"></i></p>
             </div>
 
-			<div id="date"></div>
-
-			<div id="entries"></div>
-
-			<div id="students"></div>
-
-			<div id="totalHours"></div>
 
 
 
