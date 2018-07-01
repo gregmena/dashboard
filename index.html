@@ -19,15 +19,19 @@
   debugger;
 
 // ajax for first row of data, hardcoded
-  	$("#date").html(data[0].date);
-  	$("#entries").html(data[0].entries);
-  	$("#students").html(data[0].students);
-  	$("#totalHours").html(data[0].totalHours);
+  	// $("#date").html(data[0].date);
+  	// $("#entries").html(data[0].entries);
+  	// $("#students").html(data[0].students);
+  	// $("#totalHours").html(data[0].totalHours);
 
-// last row  once data is good
-// $("#date").html(data[data.length-1].date);
-
+// ajax for last row of data entered
+$("#date").html(data[data.length-1].date);
+$("#entries").html(data[data.length-1].entries);
+$("#students").html(data[data.length-1].students);
+$("#totalHours").html(data[data.length-1].totalHours);
 });
+
+
 
 // chr.parker123@gmail.com
 
