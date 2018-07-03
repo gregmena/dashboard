@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ELAC - Non-Credit Dashboards</title>
+        <title>ELAC - Non-Credit Dashboard</title>
         <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -14,6 +14,13 @@
         <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		</style>
+
+<!-- dark green	#162E20
+	 even darker green #112519
+	 elac gold  #FBB731
+ -->
+
 		<script>
 			$.getJSON("https://sheetsu.com/apis/v1.0su/3eb2416f0252", function(data) {
 
@@ -39,31 +46,22 @@ var roundedQuotient = averageComputed.toFixed(2);
 
 $("#average").append(roundedQuotient);
 
-// var myJsonString = parseInt(data);
-// console.log(myJsonString);
 
-// var crazyNumber = myJsonString[0].students*4567898765;
-// console.log(crazyNumber);
 });
 
 
 
-// chr.parker123@gmail.com
 
 		</script>
     </head>
 
 
-
-
-
-
-    <body>
-        <section class="hero is-info is-medium is-bold">
-            <div class="hero-head">
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="navbar-brand">
+    <body style="background-color:#162E20;background-image:none"; >
+        <section class="hero is-info is-medium is-bold" style="background-color:#162E20;background-image:none";">
+            <div class="hero-head" style="background-color:#162E20;background-image:none";">
+                <nav class="navbar" style="background-color:#162E20;">
+                    <div class="container" style="background-color:#162E20;">
+                        <div class="navbar-brand" style="background-color:#162E20;">
 <!--                             <a class="navbar-item" href="../">
                                 <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
                             </a> -->
@@ -79,7 +77,7 @@ $("#average").append(roundedQuotient);
                 </nav>
             </div>
             <div class="hero-body">
-                <div class="container has-text-centered">
+                <div class="container has-text-centered" style="background-color:#162E20;background-image:none";" >
                     <h1 class="title is-1">
                     Noncredit Data Dashboard
                     </h1>
@@ -90,58 +88,54 @@ $("#average").append(roundedQuotient);
             </div>
         </section>
 
-<section class="container">
+<section class="container" style="background-color:#162E20;background-image:none";">
         
 
 <div class="intro column is-10 is-offset-1">
-<h2 class="title is-2">Non-Credit ESL Courses</h2>
-<p><span id="entries" style="color:red"></span> form entries as of <span id="date" style="color: red"></span></p>
+<h2 class="title is-2" style="color:#FBB731;">Non-Credit ESL Courses</h2>
+<p><span id="entries" style="color:#FBB731"></span> form entries as of <span id="date" style="color:#FBB731"></span></p>
 <br />
 
 <!--  -->
-<div class="box">
-<span id="students" style="color:red; font-size: 60px;"></span> <p>students <i class="fas fa-user-graduate"></i></p>
+<div class="box" style="background-color:#112519;">
+<span id="students" style="color:#FBB731; font-size: 60px;"></span> <p>Students <i class="fas fa-user-graduate" "></i></p>
 </div>
 
 	
 <!--  -->
 
-<div class="box"><span id="totalHours" style="color:red; font-size: 60px;"></span><p>total hours attended				<i class="far fa-clock"></i></p>
+<div class="box" style="background-color:#112519;"><span id="totalHours" style="color:#FBB731; font-size: 60px;"></span><p>total hours attended				<i class="far fa-clock"></i></p>
   </div>
 
 
 <!--  -->
 
-<div class="box">
-	<span id="average" style="color:red; font-size: 60px;">
+<div class="box" style="background-color:#112519;">
+	<span id="average" style="color:#FBB731; font-size: 60px;">
 	</span> 
 	<p>average hours attended<i class="fas fa-caret-down"></i></p>
 </div>
 
 <!--  -->
 
-<div class="box">
+<!-- <div class="box">
  <span id="ftes" style="color:blue; font-size: 14px;">This will be calculated</span> <p>FTES <i class="fas fa-school"></i></p>
 </div>
-
+ -->
 </section>
 
 
 
-        <footer class="footer">
+        <footer class="footer" style="background-color:#235940;">
             <div class="container">
                     
                 <div class="content has-text-centered">
-                    <p>
-                        <a class="icon" href="https://github.com/dansup/bulma-templates">
-                            <i class="fa fa-github"></i>
-                        </a>
                     </p>
                     <div class="control level-item">
                         <a href="https://github.com/dansup/bulma-templates">
                             <div class="tags has-addons">
-                                <span class="tag is-dark">GMena</span>
-                                <span class="tag is-info">MIT license</span>
+
+<img src="./images/elac_logo.png" alt="East Los Angeles College" width="60" height="75">
                             </div>
                         </a>
                     </div>
